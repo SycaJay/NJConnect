@@ -1,0 +1,111 @@
+/* Basic page styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #dfe6e9;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+}
+
+th {
+    background-color: #6c5ce7;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5e4fe0;
+}
+
+/* Responsive Design */
+
+/* For medium screens (tablets, landscape phones, etc.) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for medium screens */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px; /* Adjust header size for smaller screens */
+    }
+
+    table {
+        font-size: 14px; /* Adjust table font size */
+    }
+
+    .btn {
+        font-size: 14px; /* Smaller button text */
+        padding: 10px 18px; /* Adjust button padding */
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Further reduce container width for phones */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust header size for very small screens */
+    }
+
+    table {
+        font-size: 12px; /* Adjust table text size */
+    }
+
+    th, td {
+        padding: 8px; /* Adjust padding for table cells */
+    }
+
+    .btn {
+        font-size: 12px; /* Smaller button text */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+}

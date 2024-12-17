@@ -1,0 +1,14 @@
+{
+    "name": "syca/final",
+    "description": "A web application for managing user accounts, including features like password reset using email and tokens, user registration, and login.",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Syca"
+        }
+    ]
+}

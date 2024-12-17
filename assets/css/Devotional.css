@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+    font-family: 'Caveat', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/nature.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.ministry-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.top-nav a:hover {
+    color: #ffdf00;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    padding: 20px;
+}
+
+.devotional {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 500px;
+    margin-top: 70px;
+    margin-left: 80px;
+}
+
+.devotional h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.devotional-text {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.document-preview {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.document-preview iframe {
+    border: none;
+    width: 100%;
+    height: 400px;
+    background: white;
+}
+
+.download-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.download-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+audio {
+    width: 100%;
+    outline: none;
+}
+
+.upload-devotional {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px;
+    height: 500px;
+    margin-right: 80px;
+}
+
+.upload-devotional h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.upload-devotional input[type="file"] {
+    display: none;
+}
+
+.upload-devotional button {
+    display: none;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media p {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#email {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffdf00;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffc700;
+}
+
+/* New styles for download buttons */
+.download-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.download-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.document-preview {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .devotional, .upload-devotional {
+        width: 80%; /* Make the sections smaller on tablets */
+        margin: 20px 0;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .logo {
+        height: 40px; /* Reduce logo size */
+    }
+
+    .ministry-name {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .devotional, .upload-devotional {
+        width: 90%; /* Full width for mobile devices */
+        margin: 10px 0;
+    }
+
+    .devotional h1 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    .devotional-text {
+        font-size: 16px; /* Smaller text for mobile */
+    }
+
+    .social-media img {
+        width: 25px; /* Smaller icons */
+        height: 25px;
+    }
+}

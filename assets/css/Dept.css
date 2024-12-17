@@ -1,0 +1,131 @@
+/* Remove margin and padding globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling to remove the white background */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+
+/* Stylish header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: absolute; /* Position on top of the images */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+}
+
+header .logo-name {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .ministry-name {
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    font-weight: 500;
+}
+
+.top-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.top-nav ul li {
+    margin: 0 15px;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    font-weight: 400;
+}
+
+.top-nav ul li a:hover {
+    color: #f0a500; /* Hover effect for navigation links */
+}
+
+/* Slideshow container styling */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Styling for each slide */
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the entire page */
+}
+
+.dept-info {
+    position: absolute;
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for true centering */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif; /* Stylish font for description */
+    text-align: center;
+}
+
+.dept-info h2 {
+    margin: 0;
+    font-size: 100px; /* Very large department name */
+    font-family: 'Dancing Script', cursive; /* Handwriting font */
+    font-weight: 700;
+}
+
+.dept-info p {
+    font-size: 20px;
+    margin-top: 10px; /* Space between department name and description */
+}
+
+/* Footer styling */
+footer {
+    text-align: left;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer .social-media a {
+    margin: 0 15px;
+}
+
+footer .social-media a img {
+    height: 40px;
+}
+
+/* Add hover effect for social media icons */
+footer .social-media a:hover img {
+    opacity: 0.7;
+}

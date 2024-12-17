@@ -1,0 +1,222 @@
+/* Basic page styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.order-summary {
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.order-summary h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.user-details, .order-summary table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.user-details p, .order-summary td {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+}
+
+.order-summary table {
+    border-collapse: collapse;
+}
+
+.order-summary th, .order-summary td {
+    padding: 12px;
+    text-align: left;
+}
+
+.order-summary th {
+    background-color: #f2f2f2;
+}
+
+.order-summary td {
+    border-bottom: 1px solid #ddd;
+}
+
+.order-summary td strong {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.payment-methods {
+    margin-bottom: 30px;
+}
+
+.payment-methods label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.payment-methods input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.payment-methods .card-info, .payment-methods .mobile-info {
+    display: none;
+}
+
+.payment-methods input[type="radio"]:checked + .card-info {
+    display: block;
+    margin-top: 15px;
+}
+
+.payment-methods input[type="radio"]:checked + .mobile-info {
+    display: block;
+    margin-top: 15px;
+}
+
+.payment-methods input[type="text"], .payment-methods input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.payment-methods .mobile-info input {
+    padding: 10px;
+}
+
+.complete-payment {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.complete-payment:hover {
+    background-color: #2ecc71;
+}
+
+.terms {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+.terms a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .complete-payment {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .payment-methods label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .order-summary th, .order-summary td {
+        padding: 8px;
+    }
+
+    .payment-methods label {
+        font-size: 14px;
+    }
+
+    .payment-methods input[type="text"], .payment-methods input[type="number"] {
+        padding: 10px;
+    }
+
+    .complete-payment {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .order-summary th, .order-summary td {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .payment-methods input[type="text"], .payment-methods input[type="number"] {
+        padding: 8px;
+    }
+
+    .complete-payment {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

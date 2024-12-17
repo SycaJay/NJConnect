@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Courgette', cursive;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* First background video */
+}
+
+.background-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Ensures the video stays behind everything else */
+}
+
+.background-video-second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Second background video */
+}
+
+.background-video-second video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4; /* Reduced transparency for the second video */
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 1;
+    z-index: 0.5;
+}
+
+.logo-name .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.ministry-name {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    color: white;
+    font-size: 16px;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+.content-wrapper {
+    position: relative;
+    margin: 80px auto;
+    height: calc(100vh - 160px); /* Adjust height to fill the available space */
+}
+
+.growth-contact-left, .growth-contact-right {
+    width: 500px; /* Set the width of the square */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 80px; /* Move up under the ministry name */
+}
+
+.growth-contact-left {
+    left: 50px; /* Align it to the left */
+}
+
+.growth-contact-right {
+    top: 150px; /* Diagonal shift: a bit lower */
+    left: 800px; /* Shifted more to the right */
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+form input, form select, form button, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #4a148c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .subscribe input {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+footer .subscribe button {
+    padding: 12px 15px;
+    background-color: #ff6f00;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer .subscribe button:hover {
+    background-color: #e65100;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For phones */
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .growth-contact-left, .growth-contact-right {
+        width: 90%; /* Make contact boxes smaller */
+        left: 5%;
+        position: relative;
+        top: 20px; /* Adjust the positioning */
+    }
+
+    .growth-contact-right {
+        top: 120px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer .subscribe {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    .growth-contact-left, .growth-contact-right {
+        width: 80%; /* Adjust width */
+        left: 10%;
+    }
+
+    .growth-contact-right {
+        top: 130px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
+
+/* For larger screens like laptops and desktops */
+@media (min-width: 1024px) {
+    .growth-contact-left, .growth-contact-right {
+        width: 500px; /* Set back to original width */
+    }
+
+    .growth-contact-right {
+        top: 150px;
+    }
+}
