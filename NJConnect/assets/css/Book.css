@@ -1,0 +1,196 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.ministry-name {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.top-nav ul li {
+    display: inline;
+}
+
+.top-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.top-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.book {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+}
+
+.book-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.book img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.book-details {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.book h2 {
+    font-size: 16px;
+    margin: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.book .price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c7c31;
+    margin: 5px 0;
+}
+
+.book button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.book button:hover {
+    background-color: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For devices with width less than 768px (Tablets and smaller devices) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .books-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .book {
+        height: auto; /* Allow flexibility in book height */
+    }
+
+    .book h2 {
+        font-size: 14px;
+    }
+
+    .book .price {
+        font-size: 12px;
+    }
+
+    .book button {
+        font-size: 12px;
+    }
+}
+
+/* For devices with width less than 480px (Phones) */
+@media (max-width: 480px) {
+    .logo-name {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ministry-name {
+        font-size: 16px;
+    }
+
+    .top-nav ul {
+        gap: 8px;
+    }
+
+    .books-container {
+        padding: 10px;
+    }
+
+    .book {
+        height: auto;
+    }
+
+    .book h2 {
+        font-size: 12px;
+    }
+
+    .book .price {
+        font-size: 10px;
+    }
+
+    .book button {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+}

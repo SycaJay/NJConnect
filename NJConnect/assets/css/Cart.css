@@ -1,0 +1,236 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f8f1f1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(61, 139, 30);
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+}
+
+.cart-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.cart-header {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 15px 0;
+}
+
+.cart-item img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #555;
+}
+
+.cart-item-price {
+    font-size: 18px;
+    color: rgb(61, 139, 30);
+    font-weight: 600;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.quantity-btn {
+    padding: 5px 12px;
+    font-size: 18px;
+    background-color: rgb(61, 139, 30);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+    background-color: rgb(51, 119, 25);
+}
+
+.quantity-display {
+    font-size: 18px;
+    font-weight: 500;
+    min-width: 30px;
+    text-align: center;
+}
+
+.cart-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total-price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.checkout-btn {
+    padding: 12px 25px;
+    background-color: rgb(61, 139, 30);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: rgb(51, 119, 25);
+}
+
+.checkout-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 20px;
+    color: #666;
+}
+
+.return-btn {
+    padding: 12px 25px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.return-btn:hover {
+    background-color: #00796b;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: 24px;
+    }
+
+    .cart-container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .cart-header {
+        font-size: 28px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .cart-item img {
+        max-width: 60px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .cart-item-name,
+    .cart-item-price,
+    .quantity-display {
+        font-size: 16px;
+    }
+
+    .cart-actions {
+        margin-top: 15px;
+    }
+
+    .checkout-btn,
+    .return-btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+/* For mobile phones */
+@media only screen and (max-width: 480px) {
+    header {
+        font-size: 20px;
+    }
+
+    .cart-container {
+        margin: 5px;
+        padding: 15px;
+    }
+
+    .cart-header {
+        font-size: 24px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+    }
+
+    .cart-item img {
+        max-width: 50px;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .cart-item-name,
+    .cart-item-price,
+    .quantity-display {
+        font-size: 14px;
+    }
+
+    .cart-actions {
+        margin-top: 10px;
+    }
+
+    .checkout-btn,
+    .return-btn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}

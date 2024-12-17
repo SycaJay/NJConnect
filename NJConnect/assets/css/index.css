@@ -1,0 +1,258 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif; /* Lora for body text */
+    line-height: 1.6;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    background-color: #222;
+}
+
+/* Top Bar Styling */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Reduced padding for a thinner bar */
+    background-color: #333; /* Dark grey background for better visibility */
+    color: white;
+    z-index: 1000; /* Ensures it's always on top */
+    position: fixed; /* Fixed to the top */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the bar horizontally */
+    width: 80%; /* Set width to 80% of the page */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for a floating effect */
+}
+
+/* Logo and Title Layout */
+.top-bar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .logo img {
+    height: 40px; /* Reduced logo size */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.top-bar h1 {
+    font-size: 18px; /* Reduced font size for the title */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Styling */
+.top-bar .nav-links ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.top-bar .nav-links li {
+    margin: 0 15px;
+}
+
+.top-bar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Adjusted font size for better readability */
+    transition: color 0.3s ease;
+}
+
+.top-bar .nav-links a:hover {
+    color: #ffcc00;
+}
+
+.top-bar .btn {
+    padding: 8px 16px;
+    background-color: #ffcc00;
+    color: #003366;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.top-bar .btn:hover {
+    background-color: #ffaa00;
+}
+
+
+/* Hero Section with Background Video */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+/* Ensure the video stays in the background */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keeps the video behind other content */
+}
+
+.hero-content {
+    position: absolute;
+    top: 10%; /* Push Welcome text to the top */
+    z-index: 2;
+}
+
+/* Update the font for the 'Welcome' text */
+.hero-content h2 {
+    font-family: 'Poppins', sans-serif; /* Poppins font for the heading */
+    font-size: 3rem; /* Adjust the font size */
+    font-weight: 600; /* Semi-bold */
+    margin-bottom: 10px; /* Space between heading and text */
+}
+
+/* Update the description text to use a script font */
+.hero-content p {
+    font-family: 'Canva Sans', cursive; /* Script-style font for description */
+    font-size: 1.5rem;
+    font-weight: 400; /* Normal weight */
+    margin-top: 10px; /* Space above description */
+    line-height: 1.5; /* Improve readability */
+}
+/* Upcoming Events Section - Centered Over Video */
+.events-section {
+    position: absolute;
+    top: 60%; /* Adjusted for better spacing */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    text-align: center;
+    z-index: 2; /* Ensure it overlays the video */
+}
+
+/* Heading for Upcoming Events */
+.section-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Poppins', sans-serif; /* Poppins for heading */
+}
+
+/* Event Flyer Styling */
+.event-flyer img {
+    max-width: 100%;
+    width: 300px; /* Reduced the flyer size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    animation: popUp 4s infinite; /* Add the animation */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1000; /* Keeps footer above background */
+}
+
+/* Keyframe Animation for Flyer */
+@keyframes popUp {
+    0% {
+        transform: scale(0); /* Start completely hidden */
+        opacity: 0; /* Fully transparent */
+    }
+    20% {
+        transform: scale(1.1); /* Slightly bigger for pop effect */
+        opacity: 1; /* Fully visible */
+    }
+    40% {
+        transform: scale(1); /* Return to normal size */
+    }
+    80% {
+        transform: scale(1); /* Stay normal size for a while */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: scale(0); /* Shrink back */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Devices (Phones in Portrait) */
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-bar h1 {
+        font-size: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .event-flyer img {
+        width: 80%; /* Make the flyer more responsive */
+    }
+
+    .section-heading {
+        font-size: 24px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-bar .nav-links ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .event-flyer img {
+        width: 60%; /* Adjust flyer size */
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1024px) {
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    .event-flyer img {
+        width: 300px; /* Keep flyer size fixed */
+    }
+}

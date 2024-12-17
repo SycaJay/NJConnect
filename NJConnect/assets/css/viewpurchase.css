@@ -1,0 +1,193 @@
+/* Basic page styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #dfe6e9;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+}
+
+th {
+    background-color: #6c5ce7;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Status dropdown styling */
+select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #dfe6e9;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    width: 100px; /* Adjust dropdown width */
+}
+
+select:focus {
+    outline: none;
+    border-color: #6c5ce7;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5e4fe0;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Modal Popup styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.modal-header {
+    font-size: 24px;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+
+/* For medium screens (tablets, landscape phones, etc.) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for medium screens */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px; /* Reduce font size for smaller screens */
+    }
+
+    .modal-content {
+        width: 60%; /* Increase modal width for tablets */
+    }
+
+    table {
+        font-size: 14px; /* Adjust table font size */
+    }
+
+    .btn {
+        font-size: 14px; /* Make buttons smaller */
+        padding: 10px 18px; /* Adjust button padding */
+    }
+
+    .modal-header {
+        font-size: 22px; /* Reduce header size for modals on smaller screens */
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Further reduce container width for phones */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px; /* Reduce header size even more for phone screens */
+    }
+
+    .modal-content {
+        width: 80%; /* Increase modal width for phones */
+    }
+
+    table {
+        font-size: 12px; /* Make table text smaller */
+    }
+
+    th, td {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .btn {
+        font-size: 12px; /* Smaller button text */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    .modal-header {
+        font-size: 20px; /* Reduce modal header size */
+    }
+}
